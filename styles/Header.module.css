@@ -1,0 +1,121 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 999;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 1 1000px;
+  height: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+._60logo {
+  display: block;
+}
+
+._48logo {
+  display: none;
+}
+
+.menuToggle {
+  display: none;
+}
+
+.menuGroup {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  height: 9px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: GmarketSans;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.56px;
+  text-align: left;
+  color: #7a8196;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu:hover {
+  color: #0ecca8;
+}
+
+.menuBtn {
+  width: 100px;
+  height: 38px;
+  border-radius: 4px;
+  font-family: GmarketSans;
+  background-color: #0ecca8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btnText {
+  height: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -0.56px;
+  text-align: left;
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    flex: 0 1 768px;
+    height: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    /* flex: 0 1 375px; */
+    flex: 1;
+    height: 56px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .menuGroup {
+    display: none;
+  }
+
+  ._60logo {
+    display: none;
+  }
+
+  ._48logo {
+    display: block;
+  }
+
+  .menuToggle {
+    display: block;
+    cursor: pointer;
+  }
+}

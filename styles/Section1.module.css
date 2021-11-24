@@ -1,0 +1,221 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  flex: 0 0 1000px;
+  display: flex;
+}
+
+.component1 {
+  flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 160px;
+  padding-left: 60px;
+}
+
+.component1__label1 {
+  width: 300px;
+  font-family: GmarketSans;
+  font-size: 48px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: -1.92px;
+  text-align: left;
+  color: #454d61;
+  margin-bottom: 32px;
+}
+
+.component1__label2 {
+  width: 210px;
+  opacity: 0.6;
+  font-family: GmarketSans;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #454d61;
+  margin-bottom: 80px;
+  word-break: keep-all;
+}
+
+.component1__btnGroup {
+  display: flex;
+}
+
+.component1__marketBtn {
+  width: 180px;
+  height: 56px;
+  border-radius: 28px;
+  box-shadow: 5px 5px 20px 0 rgba(35, 111, 134, 0.15);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.component1__marketBtn__googleIcon {
+  background-image: url("./img/btn_googleplay@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex: 0 0 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.component1__marketBtn__appleIcon {
+  background-image: url("./img/btn_appstore@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex: 0 0 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.component1__marketBtn__text {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #444c64;
+}
+
+.component2 {
+  background-image: url("./img/section1_illust@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex: 0 0 540px;
+  height: 640px;
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    flex: 0 0 768px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  .component1 {
+    padding: 0;
+    padding-top: 56px;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .component1__label1 {
+    font-size: 48px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.21;
+    letter-spacing: -1.92px;
+    text-align: center;
+    color: #454d61;
+  }
+
+  .component1__label2 {
+    width: 320px;
+    opacity: 0.6;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #454d61;
+  }
+
+  .component1__marketBtn {
+    width: 220px;
+    height: 56px;
+  }
+
+  .component1__marketBtn__googleIcon {
+    margin-right: 16px;
+  }
+
+  .component1__marketBtn__appleIcon {
+    margin-right: 16px;
+  }
+
+  .component2 {
+    background-image: url("./img/[t]section1_illust@3x.png");
+    height: 480px;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex: 0 0 375px;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+
+  .component1 {
+    padding: 0;
+    padding-top: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .component1__label1 {
+    width: 250px;
+    font-size: 36px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: -1.44px;
+    text-align: center;
+    color: #454d61;
+  }
+
+  .component1__label2 {
+    width: 270px;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    text-align: center;
+    color: #454d61;
+  }
+
+  .component1__marketBtn {
+    width: 166px;
+    height: 48px;
+  }
+
+  .component1__marketBtn__text {
+    font-size: 14px;
+  }
+
+  .component2 {
+    background-image: url("./img/[m]section1_illust@3x.png");
+    height: 303px;
+    flex: 0 0 342px;
+    margin-top: 24px;
+  }
+}

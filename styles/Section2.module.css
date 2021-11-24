@@ -1,0 +1,89 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #6aa7ff;
+}
+
+.content {
+  flex: 0 0 1000px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.component1 {
+  background-image: url("./img/section2_badge@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 32px;
+  height: 32px;
+  margin-top: 44px;
+}
+
+.component2 {
+  margin-top: 24px;
+  font-family: GmarketSans;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -0.96px;
+  text-align: center;
+  color: #fff;
+}
+
+.component3 {
+  background-image: url("./img/section2_bg_circle@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 506px;
+  margin-top: 64px;
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    flex: 0 0 768px;
+  }
+
+  .component1 {
+    margin-top: 80px;
+  }
+
+  .component2 {
+  }
+
+  .component3 {
+    background-image: url("./img/[t]section2_bg_circle@3x.png");
+    margin-top: 289px;
+    width: 768px;
+    height: 389px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex: 1;
+  }
+
+  .component1 {
+    width: 24px;
+    height: 24px;
+    margin-top: 48px;
+  }
+
+  .component2 {
+    font-size: 18px;
+  }
+
+  .component3 {
+    background-image: url("./img/[m]section2_bg_circle@3x.png");
+    margin-top: 170px;
+    width: 375px;
+    height: 190px;
+  }
+}
