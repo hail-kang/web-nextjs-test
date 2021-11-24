@@ -1,0 +1,129 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  flex: 0 0 1000px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.component1 {
+  font-family: GmarketSans;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -1.6px;
+  text-align: center;
+  color: #444c64;
+  margin-top: 120px;
+}
+
+.component2 {
+  margin-top: 80px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.component2__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.component2__item__text {
+  opacity: 0.6;
+  font-family: GmarketSans;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #444c64;
+  margin-top: 16px;
+}
+
+.component2__item__icon1 {
+  background-image: url("./img/section4_img1@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 200px;
+  height: 200px;
+}
+
+.component2__item__icon2 {
+  background-image: url("./img/section4_img2@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 200px;
+  height: 200px;
+}
+
+.component2__item__icon3 {
+  background-image: url("./img/section4_img3@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    flex: 0 0 768px;
+  }
+
+  .component1 {
+    margin-top: 140px;
+  }
+
+  .component2 {
+    margin-bottom: 140px;
+  }
+
+  .component2__item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex: 1;
+  }
+
+  .component1 {
+    margin-top: 80px;
+    font-size: 32px;
+  }
+
+  .component2 {
+    margin-top: 67px;
+    margin-bottom: 48px;
+    width: 375px;
+    justify-content: start;
+    overflow-x: auto;
+  }
+
+  .component2__item {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex: 0 0 200px;
+  }
+
+  .component2__item__text {
+    font-size: 16px;
+  }
+}

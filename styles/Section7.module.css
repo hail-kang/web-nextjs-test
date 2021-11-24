@@ -1,0 +1,158 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #0ecca8;
+  height: 200px;
+}
+
+.content {
+  background-image: url("./img/section7_object@3x.png");
+  background-position: 380px -200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.component1 {
+  font-family: GmarketSans;
+  font-size: 28px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.21;
+  letter-spacing: -1.12px;
+  text-align: left;
+  color: #fff;
+}
+
+.component2 {
+  flex: 1;
+}
+
+.component2__btnGroup {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.component2__marketBtn {
+  width: 180px;
+  height: 56px;
+  border-radius: 28px;
+  box-shadow: 5px 5px 20px 0 rgba(35, 111, 134, 0.15);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.component2__marketBtn__googleIcon {
+  background-image: url("./img/btn_googleplay@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex: 0 0 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.component2__marketBtn__appleIcon {
+  background-image: url("./img/btn_appstore@3x.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  flex: 0 0 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.component2__marketBtn__text {
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  text-align: left;
+  color: #444c64;
+}
+
+@media screen and (max-width: 1000px) {
+  .section {
+    height: 338px;
+  }
+
+  .content {
+    flex-direction: column;
+    background-position: 380px 0px;
+    padding: 0;
+  }
+
+  .component1 {
+    margin-top: 80px;
+  }
+
+  .component2 {
+    margin-top: 60px;
+  }
+
+  .component2__marketBtn {
+    width: 180px;
+    height: 56px;
+  }
+
+  .component2__marketBtn__googleIcon {
+    margin-right: 25px;
+  }
+
+  .component2__marketBtn__appleIcon {
+    margin-right: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    height: 337px;
+  }
+
+  .content {
+    flex-direction: column;
+    background-position: 200px 100px;
+    padding: 0;
+  }
+
+  .component1 {
+    margin-top: 88px;
+  }
+
+  .component2 {
+    margin-top: 56px;
+  }
+
+  .component2__marketBtn {
+    width: 166px;
+    height: 48px;
+  }
+
+  .component1__marketBtn__text {
+    font-size: 14px;
+  }
+
+  .component2__marketBtn__googleIcon {
+    margin-right: 24px;
+  }
+
+  .component2__marketBtn__appleIcon {
+    margin-right: 24px;
+  }
+}
