@@ -53,6 +53,13 @@ export default function Section5() {
       left: position,
       behavior: "smooth",
     });
+
+    let animationReplay = document.getElementsByClassName(
+      styles.component2__1
+    )[0];
+    let copyElement = animationReplay;
+    animationReplay.remove();
+    document.getElementsByClassName(styles.component2)[0].prepend(copyElement);
     setState({ phoneSection: number });
   }
 
@@ -62,7 +69,7 @@ export default function Section5() {
   }
 
   return (
-    <div className={styles.section}>
+    <div className={styles.section} id="section5">
       <div className={styles.content}>
         <div className={styles.component1}>
           <div className={styles.component1__menu}>

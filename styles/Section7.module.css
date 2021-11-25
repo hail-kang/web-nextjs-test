@@ -48,6 +48,7 @@
   background-color: #fff;
   display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   user-select: none;
   margin-left: 6px;
@@ -62,7 +63,7 @@
   flex: 0 0 32px;
   height: 32px;
   margin-right: 8px;
-  margin-left: 25px;
+  /* margin-left: 25px; */
 }
 
 .component2__marketBtn__appleIcon {
@@ -73,7 +74,7 @@
   flex: 0 0 32px;
   height: 32px;
   margin-right: 8px;
-  margin-left: 32px;
+  /* margin-left: 32px; */
 }
 
 .component2__marketBtn__text {
@@ -143,10 +144,10 @@
   }
 
   .component2__marketBtn__googleIcon {
-    margin-left: 24px;
+    /* margin-left: 24px; */
   }
 
   .component2__marketBtn__appleIcon {
-    margin-left: 30px;
+    /* margin-left: 30px; */
   }
 }

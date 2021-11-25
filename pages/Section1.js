@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 export default function Section1() {
   return (
-    <div className={styles.section}>
+    <div className={styles.section} id="section1">
       <div className={styles.content}>
         <div className={styles.component1}>
           <div className={styles.component1__label1}>
@@ -27,19 +27,22 @@ export default function Section1() {
           </div>
 
           <div className={styles.component1__btnGroup}>
-            <div className={styles.component1__marketBtn}>
-              <div className={styles.component1__marketBtn__googleIcon}></div>
-              <div className={styles.component1__marketBtn__text}>
-                Google Play
+            <a href="https://play.google.com/store/apps/details?id=com.moyo">
+              <div className={styles.component1__marketBtn}>
+                <div className={styles.component1__marketBtn__googleIcon}></div>
+                <div className={styles.component1__marketBtn__text}>
+                  Google Play
+                </div>
               </div>
-            </div>
-
-            <div className={styles.component1__marketBtn}>
-              <div className={styles.component1__marketBtn__appleIcon}></div>
-              <div className={styles.component1__marketBtn__text}>
-                App Store
+            </a>
+            <a href="https://apps.apple.com/kr/app/%EB%AA%A8%EC%97%AC/id1531678550">
+              <div className={styles.component1__marketBtn}>
+                <div className={styles.component1__marketBtn__appleIcon}></div>
+                <div className={styles.component1__marketBtn__text}>
+                  App Store
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <div className={styles.component2}></div>

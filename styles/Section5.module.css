@@ -79,6 +79,10 @@
   flex-direction: column;
   flex: 1 0 31px;
   margin-left: 100px;
+
+  animation-name: slidein;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
 }
 
 .component2__1__label1 {
@@ -176,6 +180,18 @@
   display: none;
 }
 
+@keyframes slidein {
+  from {
+    margin-left: 150px;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 100px;
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .content {
     flex: 0 0 768px;
@@ -210,6 +226,18 @@
     display: flex;
     justify-content: center;
     flex: 0 0 495px;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 50px;
+      opacity: 0;
+    }
+
+    to {
+      margin-left: 0px;
+      opacity: 1;
+    }
   }
 }
 
