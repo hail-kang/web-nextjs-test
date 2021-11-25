@@ -122,6 +122,8 @@
   .menuToggle {
     display: block;
     cursor: pointer;
+    width: 32px;
+    height: 32px;
   }
 
   .menuGroup.active {
@@ -135,6 +137,10 @@
     padding-top: 8px;
     padding-bottom: 16px;
     z-index: 888;
+
+    animation-name: slidein;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
   }
 
   .menu {
@@ -157,5 +163,19 @@
     left: 0;
     background-color: rgba(6, 6, 7, 0.8);
     z-index: 777;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-top: -100px;
+      /* height: 0px; */
+      opacity: 0.5;
+    }
+
+    to {
+      margin-top: 0px;
+      /* height: 194px; */
+      opacity: 1;
+    }
   }
 }

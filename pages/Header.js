@@ -1,6 +1,37 @@
 import styles from "../styles/Header.module.css";
 import classNames from "classnames";
-import { useState } from "react";
+import React, { useState } from "react";
+
+import Lottie from "react-lottie";
+import * as animationData from "./data/menu.json";
+
+class MenuController extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const defaultOptions = {
+      loop: false,
+      autoplay: false,
+      animationData: animationData,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
+
+    return (
+      <div>
+        <Lottie
+          options={defaultOptions}
+          height={32}
+          width={32}
+          direction={this.props.direction}
+        />
+      </div>
+    );
+  }
+}
 
 export default function Header() {
   let [state, setState] = useState({
@@ -94,15 +125,11 @@ export default function Header() {
             </div>
           </div>
         )}
-        {state.menuActive ? (
-          <div className={styles.menuToggle} onClick={toggleMenuActive}>
-            <img src="img/close@3x.png" width="32px" />
-          </div>
-        ) : (
-          <div className={styles.menuToggle} onClick={toggleMenuActive}>
-            <img src="img/menu@3x.png" width="32px" />
-          </div>
-        )}
+        <div className={styles.menuToggle} onClick={toggleMenuActive}>
+          <MenuController
+            direction={state.menuActive ? 1 : -1}
+          ></MenuController>
+        </div>
       </div>
     </div>
   );
