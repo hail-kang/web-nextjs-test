@@ -15,6 +15,7 @@ export default function Header() {
 
   return (
     <div className={styles.header}>
+      {state.menuActive ? <div className={styles.blocking}></div> : null}
       <div className={styles.content}>
         <div className={styles.logo}>
           <img

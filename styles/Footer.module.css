@@ -68,6 +68,7 @@
 .component5 {
   margin-top: 8px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .component5__1 {
@@ -109,5 +110,9 @@
 
   .component3__2 {
     margin-top: 8px;
+  }
+
+  .component5__1 {
+    margin-bottom: 8px;
   }
 }

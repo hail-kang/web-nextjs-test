@@ -1,5 +1,8 @@
 import "../styles/globals.css";
 
+// import smoothscroll from "smoothscroll-polyfill";
+// smoothscroll.polyfill();
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }

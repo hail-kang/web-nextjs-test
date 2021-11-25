@@ -18,6 +18,8 @@ export default function Home() {
       <Header />
       <Main />
       <Footer />
+      <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+      <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
     </div>
   );
 }
