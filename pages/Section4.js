@@ -22,7 +22,7 @@ export default function Section4() {
       saveX = moveX;
     }
   }
-  function discontinuousScroll() {
+  function discontinuousScroll(e) {
     let box = document.getElementsByClassName(styles.component2)[0];
     let boxSize = box.clientWidth;
     let unitSize = 240;
@@ -32,11 +32,21 @@ export default function Section4() {
 
     let number = parseInt(centerPosition / unitSize);
 
-    if (number < 1) {
-      number = 1;
-    } else if (number > 3) {
-      number = 3;
+    if (number >= 1 && number <= 3) {
+      box.scroll({
+        left: parseInt(number * unitSize - (boxSize - unitSize) / 2),
+        behavior: "smooth",
+      });
     }
+    setState({ page: number });
+  }
+
+  function stepNextPage() {
+    let box = document.getElementsByClassName(styles.component2)[0];
+    let boxSize = box.clientWidth;
+    let unitSize = 240;
+
+    let number = (state.page % 3) + 1;
 
     if (number >= 1 && number <= 3) {
       box.scroll({
@@ -59,6 +69,7 @@ export default function Section4() {
           onTouchStart={setSaveX}
           onTouchMove={limitedScroll}
           onTouchEnd={discontinuousScroll}
+          onClick={stepNextPage}
         >
           <div className={styles.component2__item}></div>
 
