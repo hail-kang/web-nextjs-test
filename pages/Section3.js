@@ -53,13 +53,15 @@ export default function Section3() {
       behavior: "smooth",
     });
 
+    setState({ phoneSection: number });
     let animationReplay = document.getElementsByClassName(
       styles.component2__1
     )[0];
     let copyElement = animationReplay;
     animationReplay.remove();
     document.getElementsByClassName(styles.component2)[0].prepend(copyElement);
-    setState({ phoneSection: number });
+    // copyElement.classList.remove(styles.component2__1);
+    // copyElement.classList.add(styles.component2__1);
   }
 
   function setPhoneSectionByButton(incre) {
@@ -107,6 +109,20 @@ export default function Section3() {
         </div>
 
         <div className={styles.component2}>
+          {/* <div
+            dangerouslySetInnerHTML={{
+              _html: `
+            <div class="${styles.component2__1}">
+              <div class="${styles.component2__1__label1}">
+              ${phoneSectionLabel1[state.phoneSection]}
+              </div>
+              <div class="${styles.component2__1__label2}">
+              ${phoneSectionLabel2[state.phoneSection]}
+              </div>
+            </div>`,
+            }}
+          ></div> */}
+
           <div className={styles.component2__1}>
             <div className={styles.component2__1__label1}>
               <div

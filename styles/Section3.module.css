@@ -80,7 +80,7 @@
 
   animation-name: slidein;
   animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .component2__1__label1 {

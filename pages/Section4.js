@@ -1,6 +1,6 @@
 import styles from "../styles/Section4.module.css";
 import classNames from "classnames";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Section4() {
   let [state, setState] = useState({
@@ -8,6 +8,21 @@ export default function Section4() {
   });
 
   let saveX = 0;
+
+  useEffect(() => {
+    let box = document.getElementsByClassName(styles.component2)[0];
+    let boxSize = box.clientWidth;
+    let unitSize = 240;
+
+    let number = state.page;
+
+    if (number >= 1 && number <= 3) {
+      box.scroll({
+        left: parseInt(number * unitSize - (boxSize - unitSize) / 2),
+        behavior: "smooth",
+      });
+    }
+  });
 
   function setSaveX(e) {
     saveX = e.changedTouches[0].clientX;
