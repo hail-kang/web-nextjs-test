@@ -147,7 +147,12 @@ export default function Section4() {
           </div>
 
           <div className={styles.component2__item}>
-            <div className={styles.component2__item__icon2}></div>
+            {/* <div className={styles.component2__item__icon2}></div> */}
+            <MotionController
+              height={200}
+              width={200}
+              animationData={motion2}
+            />
             <div className={styles.component2__item__text}>
               <p>공간 후기를 보고</p>
               <p>결정하고 싶은데</p>
@@ -155,7 +160,12 @@ export default function Section4() {
           </div>
 
           <div className={styles.component2__item}>
-            <div className={styles.component2__item__icon3}></div>
+            {/* <div className={styles.component2__item__icon3}></div> */}
+            <MotionController
+              height={200}
+              width={200}
+              animationData={motion3}
+            />
             <div className={styles.component2__item__text}>
               <p>영상으로 보면 정확하게</p>
               <p>판단할 수 있을 것 같은데</p>
