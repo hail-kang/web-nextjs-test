@@ -35,10 +35,13 @@ class MenuController extends React.Component {
 
 export default function Header() {
   let [state, setState] = useState({
-    menuActive: false,
+    menuActive: null,
   });
 
   function toggleMenuActive() {
+    if (state.menuActive == null) {
+      state.menuActive = false;
+    }
     setState({
       menuActive: state.menuActive ^ true,
     });
@@ -76,7 +79,39 @@ export default function Header() {
             className={styles._48logo}
           />
         </div>
-        {state.menuActive ? (
+        <div
+          className={classNames(
+            styles.menuGroup,
+            state.menuActive == null
+              ? styles.none
+              : state.menuActive
+              ? styles.active
+              : styles.deactive
+          )}
+        >
+          <div
+            className={styles.menu}
+            onClick={() =>
+              (location.href =
+                "https://homangu.notion.site/moyo-0f854cb2e63d42e8b31c147bd9c2db2a")
+            }
+          >
+            회사소개
+          </div>
+          <div className={styles.menu} onClick={() => moveToSection(3)}>
+            모임 서비스
+          </div>
+          <div className={styles.menu} onClick={() => moveToSection(5)}>
+            공간 서비스
+          </div>
+          <div
+            className={styles.menuBtn}
+            onClick={() => (location.href = "https://pf.kakao.com/_xhquRK")}
+          >
+            <div className={styles.btnText}>문의하기</div>
+          </div>
+        </div>
+        {/* {state.menuActive ? (
           <div className={classNames(styles.menuGroup, styles.active)}>
             <div
               className={styles.menu}
@@ -124,7 +159,7 @@ export default function Header() {
               <div className={styles.btnText}>문의하기</div>
             </div>
           </div>
-        )}
+        )} */}
         <div className={styles.menuToggle} onClick={toggleMenuActive}>
           <MenuController
             direction={state.menuActive ? 1 : -1}

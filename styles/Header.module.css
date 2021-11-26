@@ -126,6 +126,10 @@
     height: 32px;
   }
 
+  .menuGroup.none {
+    display: none;
+  }
+
   .menuGroup.active {
     display: flex;
     position: fixed;
