@@ -134,12 +134,12 @@ export default function Section4() {
           <div className={styles.component2__item}></div>
 
           <div className={styles.component2__item}>
-            <div className={styles.component2__item__icon1}></div>
-            {/* <MotionController
+            {/* <div className={styles.component2__item__icon1}></div> */}
+            <MotionController
               height={200}
               width={200}
               animationData={motion1}
-            /> */}
+            />
             <div className={styles.component2__item__text}>
               <p>모임 테마에 딱 맞는</p>
               <p>공간을 찾고 싶어</p>
@@ -147,12 +147,12 @@ export default function Section4() {
           </div>
 
           <div className={styles.component2__item}>
-            <div className={styles.component2__item__icon2}></div>
-            {/* <MotionController
+            {/* <div className={styles.component2__item__icon2}></div> */}
+            <MotionController
               height={200}
               width={200}
               animationData={motion2}
-            /> */}
+            />
             <div className={styles.component2__item__text}>
               <p>공간 후기를 보고</p>
               <p>결정하고 싶은데</p>
@@ -160,12 +160,12 @@ export default function Section4() {
           </div>
 
           <div className={styles.component2__item}>
-            <div className={styles.component2__item__icon3}></div>
-            {/* <MotionController
+            {/* <div className={styles.component2__item__icon3}></div> */}
+            <MotionController
               height={200}
               width={200}
               animationData={motion3}
-            /> */}
+            />
             <div className={styles.component2__item__text}>
               <p>영상으로 보면 정확하게</p>
               <p>판단할 수 있을 것 같은데</p>

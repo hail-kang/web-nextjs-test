@@ -237,7 +237,7 @@
   }
 
   .flex {
-    flex: 0 0 0px;
+    flex: 1 0 10px;
   }
 
   @keyframes slidein {
@@ -340,6 +340,10 @@
     height: 35px;
     margin-left: 8px;
     cursor: pointer;
+  }
+
+  .flex {
+    flex: 1 0 10px;
   }
 
   @keyframes slidein {
