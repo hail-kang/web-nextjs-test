@@ -60,8 +60,8 @@ export default function Section3() {
     let copyElement = animationReplay;
     animationReplay.remove();
     document.getElementsByClassName(styles.component2)[0].prepend(copyElement);
-    // copyElement.classList.remove(styles.component2__1);
-    // copyElement.classList.add(styles.component2__1);
+    copyElement.classList.remove(styles.component2__1);
+    copyElement.classList.add(styles.component2__1);
   }
 
   function setPhoneSectionByButton(incre) {
