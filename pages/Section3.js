@@ -61,7 +61,9 @@ export default function Section3() {
     animationReplay.remove();
     document.getElementsByClassName(styles.component2)[0].prepend(copyElement);
     copyElement.classList.remove(styles.component2__1);
-    copyElement.classList.add(styles.component2__1);
+    setTimeout(() => {
+      copyElement.classList.add(styles.component2__1);
+    }, 100);
   }
 
   function setPhoneSectionByButton(incre) {
