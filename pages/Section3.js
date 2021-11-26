@@ -53,17 +53,17 @@ export default function Section3() {
       behavior: "smooth",
     });
 
-    setState({ phoneSection: number });
     let animationReplay = document.getElementsByClassName(
       styles.component2__1
     )[0];
-    let copyElement = animationReplay;
-    animationReplay.remove();
-    document.getElementsByClassName(styles.component2)[0].prepend(copyElement);
-    copyElement.classList.remove(styles.component2__1);
+    let marginObject = document.getElementsByClassName(styles.component2__2)[0];
+    animationReplay.style = "display:none";
+    marginObject.style = "margin-top:294px";
+    setState({ phoneSection: number });
     setTimeout(() => {
-      copyElement.classList.add(styles.component2__1);
-    }, 100);
+      animationReplay.style = "display:block";
+      marginObject.style = "margin-top:0px";
+    }, 1);
   }
 
   function setPhoneSectionByButton(incre) {
