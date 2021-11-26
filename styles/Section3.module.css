@@ -178,6 +178,10 @@
   display: none;
 }
 
+.none {
+  display: none;
+}
+
 @keyframes slidein {
   from {
     margin-left: 50px;

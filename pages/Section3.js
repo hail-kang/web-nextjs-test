@@ -53,17 +53,10 @@ export default function Section3() {
       behavior: "smooth",
     });
 
-    let animationReplay = document.getElementsByClassName(
-      styles.component2__1
-    )[0];
-    let marginObject = document.getElementsByClassName(styles.component2__2)[0];
-    animationReplay.style = "display:none";
-    marginObject.style = "margin-top:294px";
+    // let animationReplay = document.getElementsByClassName(
+    //   styles.component2__1
+    // )[0];
     setState({ phoneSection: number });
-    setTimeout(() => {
-      animationReplay.style = "display:block";
-      marginObject.style = "margin-top:0px";
-    }, 100);
   }
 
   function setPhoneSectionByButton(incre) {
@@ -111,21 +104,7 @@ export default function Section3() {
         </div>
 
         <div className={styles.component2}>
-          {/* <div
-            dangerouslySetInnerHTML={{
-              _html: `
-            <div class="${styles.component2__1}">
-              <div class="${styles.component2__1__label1}">
-              ${phoneSectionLabel1[state.phoneSection]}
-              </div>
-              <div class="${styles.component2__1__label2}">
-              ${phoneSectionLabel2[state.phoneSection]}
-              </div>
-            </div>`,
-            }}
-          ></div> */}
-
-          <div className={styles.component2__1}>
+          {/* <div className={styles.component2__1}>
             <div className={styles.component2__1__label1}>
               <div
                 dangerouslySetInnerHTML={{
@@ -140,7 +119,223 @@ export default function Section3() {
                 }}
               ></div>
             </div>
-          </div>
+          </div> */}
+          {(() => {
+            if (state.phoneSection == 0) {
+              return (
+                <div>
+                  <div className={classNames(styles.component2__1)}>
+                    <div className={styles.component2__1__label1}>
+                      <p>여행지에서</p>
+                      <p>어떤 모임이 열릴까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>필터에 가고 싶은 여행지, 관심사를 입력하면</p>
+                      <p>나에게 딱 맞는 프로그램을 찾을 수 있어요</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>누가</p>
+                      <p>모임에 올까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모임을 신청하면 함께 신청한 여행자가</p>
+                      <p>어떤 사람인지 확인할 수 있어요</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>나랑</p>
+                      <p>맞는 사람들일까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모임, 여행 밸런스테스트를 통해</p>
+                      <p>함께 참여하는 사람이 나와 잘 맞는지</p>
+                      <p>바로 확인해볼 수 있어요!</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>클래스랑</p>
+                      <p>뭐가 달라?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모여 앱에서 진행되는 모든 프로그램에는</p>
+                      <p>여행자끼리 소통할 수 있는</p>
+                      <p>소셜 프로그램이 준비되어 있어요!</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            } else if (state.phoneSection == 1) {
+              return (
+                <div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>여행지에서</p>
+                      <p>어떤 모임이 열릴까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>필터에 가고 싶은 여행지, 관심사를 입력하면</p>
+                      <p>나에게 딱 맞는 프로그램을 찾을 수 있어요</p>
+                    </div>
+                  </div>
+                  <div className={classNames(styles.component2__1)}>
+                    <div className={styles.component2__1__label1}>
+                      <p>누가</p>
+                      <p>모임에 올까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모임을 신청하면 함께 신청한 여행자가</p>
+                      <p>어떤 사람인지 확인할 수 있어요</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>나랑</p>
+                      <p>맞는 사람들일까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모임, 여행 밸런스테스트를 통해</p>
+                      <p>함께 참여하는 사람이 나와 잘 맞는지</p>
+                      <p>바로 확인해볼 수 있어요!</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>클래스랑</p>
+                      <p>뭐가 달라?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모여 앱에서 진행되는 모든 프로그램에는</p>
+                      <p>여행자끼리 소통할 수 있는</p>
+                      <p>소셜 프로그램이 준비되어 있어요!</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            } else if (state.phoneSection == 2) {
+              return (
+                <div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>여행지에서</p>
+                      <p>어떤 모임이 열릴까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>필터에 가고 싶은 여행지, 관심사를 입력하면</p>
+                      <p>나에게 딱 맞는 프로그램을 찾을 수 있어요</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>누가</p>
+                      <p>모임에 올까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모임을 신청하면 함께 신청한 여행자가</p>
+                      <p>어떤 사람인지 확인할 수 있어요</p>
+                    </div>
+                  </div>
+                  <div className={classNames(styles.component2__1)}>
+                    <div className={styles.component2__1__label1}>
+                      <p>나랑</p>
+                      <p>맞는 사람들일까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모임, 여행 밸런스테스트를 통해</p>
+                      <p>함께 참여하는 사람이 나와 잘 맞는지</p>
+                      <p>바로 확인해볼 수 있어요!</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>클래스랑</p>
+                      <p>뭐가 달라?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모여 앱에서 진행되는 모든 프로그램에는</p>
+                      <p>여행자끼리 소통할 수 있는</p>
+                      <p>소셜 프로그램이 준비되어 있어요!</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            } else if (state.phoneSection == 3) {
+              return (
+                <div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>여행지에서</p>
+                      <p>어떤 모임이 열릴까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>필터에 가고 싶은 여행지, 관심사를 입력하면</p>
+                      <p>나에게 딱 맞는 프로그램을 찾을 수 있어요</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>누가</p>
+                      <p>모임에 올까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모임을 신청하면 함께 신청한 여행자가</p>
+                      <p>어떤 사람인지 확인할 수 있어요</p>
+                    </div>
+                  </div>
+                  <div
+                    className={classNames(styles.component2__1, styles.none)}
+                  >
+                    <div className={styles.component2__1__label1}>
+                      <p>나랑</p>
+                      <p>맞는 사람들일까?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모임, 여행 밸런스테스트를 통해</p>
+                      <p>함께 참여하는 사람이 나와 잘 맞는지</p>
+                      <p>바로 확인해볼 수 있어요!</p>
+                    </div>
+                  </div>
+                  <div className={classNames(styles.component2__1)}>
+                    <div className={styles.component2__1__label1}>
+                      <p>클래스랑</p>
+                      <p>뭐가 달라?</p>
+                    </div>
+                    <div className={styles.component2__1__label2}>
+                      <p>모여 앱에서 진행되는 모든 프로그램에는</p>
+                      <p>여행자끼리 소통할 수 있는</p>
+                      <p>소셜 프로그램이 준비되어 있어요!</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+          })()}
+
           <div className={styles.component2__2}>
             <div
               className={styles.component2__2__prevBtn}
