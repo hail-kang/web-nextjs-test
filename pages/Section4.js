@@ -27,10 +27,23 @@ export default function Section4() {
     let boxSize = box.clientWidth;
     let unitSize = 240;
 
-    let scrollPosition = box.scrollLeft;
-    let centerPosition = scrollPosition + boxSize / 2;
+    let scrollPosition = box.scrollLeft + boxSize / 2;
+    let numberPosition = state.page * unitSize + unitSize / 2;
 
-    let number = parseInt(centerPosition / unitSize);
+    let number;
+    if (scrollPosition > numberPosition + 40) {
+      number = state.page + 1;
+    } else if (scrollPosition < numberPosition - 40) {
+      number = state.page - 1;
+    } else {
+      number = state.page;
+    }
+
+    if (number < 1) {
+      number = 1;
+    } else if (number > 3) {
+      number = 3;
+    }
 
     if (number >= 1 && number <= 3) {
       box.scroll({
@@ -39,6 +52,19 @@ export default function Section4() {
       });
     }
     setState({ page: number });
+
+    // let scrollPosition = box.scrollLeft;
+    // let centerPosition = scrollPosition + boxSize / 2;
+
+    // let number = parseInt(centerPosition / unitSize);d
+
+    // if (number >= 1 && number <= 3) {
+    //   box.scroll({
+    //     left: parseInt(number * unitSize - (boxSize - unitSize) / 2),
+    //     behavior: "smooth",
+    //   });
+    // }
+    // setState({ page: number });
   }
 
   function stepNextPage() {
