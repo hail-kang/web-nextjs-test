@@ -37,8 +37,15 @@ export default function Section5() {
 
   function setPhoneSectionByButton(incre) {
     let number = (4 + state.phoneSection + incre) % 4;
-    sectionRef[number].current.click();
+    sectionRef[number]?.current?.click();
   }
+
+  setTimeout(() => {
+    setPhoneSectionByButton(1);
+    setTimeout(() => {
+      setPhoneSectionByButton(1);
+    }, 3000);
+  }, 3000);
 
   return (
     <div className={styles.section} id="section5">

@@ -117,6 +117,13 @@ export default function Section4() {
     setState({ page: number });
   }
 
+  setTimeout(() => {
+    stepNextPage();
+    setTimeout(() => {
+      stepNextPage();
+    }, 3000);
+  }, 3000);
+
   return (
     <div className={styles.section}>
       <div className={styles.content}>
