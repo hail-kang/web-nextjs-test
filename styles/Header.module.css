@@ -143,6 +143,28 @@
     animation-iteration-count: 1;
   }
 
+  .menuGroup.deactive {
+    display: flex;
+    position: fixed;
+    left: 0px;
+    top: 56px;
+    background-color: white;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    z-index: 888;
+    opacity: 0;
+
+    animation-name: slideout;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+
+  .menuGroup.deactive:hover {
+    display: none;
+  }
+
   .menu {
     margin-top: 16px;
     margin-bottom: 16px;
@@ -168,14 +190,24 @@
   @keyframes slidein {
     from {
       margin-top: -100px;
-      /* height: 0px; */
       opacity: 0.5;
     }
 
     to {
       margin-top: 0px;
-      /* height: 194px; */
       opacity: 1;
+    }
+  }
+
+  @keyframes slideout {
+    from {
+      margin-top: 0px;
+      opacity: 1;
+    }
+
+    to {
+      margin-top: -100px;
+      opacity: 0;
     }
   }
 }

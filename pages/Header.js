@@ -101,7 +101,7 @@ export default function Header() {
             </div>
           </div>
         ) : (
-          <div className={styles.menuGroup}>
+          <div className={classNames(styles.menuGroup, styles.deactive)}>
             <div
               className={styles.menu}
               onClick={() =>
