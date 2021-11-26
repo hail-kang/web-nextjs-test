@@ -54,7 +54,7 @@ export default function Section4() {
         behavior: "smooth",
       });
     }
-  });
+  }, []);
 
   function setSaveX(e) {
     saveX = e.changedTouches[0].clientX;
@@ -116,13 +116,6 @@ export default function Section4() {
     }
     setState({ page: number });
   }
-
-  setTimeout(() => {
-    stepNextPage();
-    setTimeout(() => {
-      stepNextPage();
-    }, 3000);
-  }, 3000);
 
   return (
     <div className={styles.section}>

@@ -1,6 +1,6 @@
 import styles from "../styles/Section3.module.css";
 import classNames from "classnames";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 export default function Section3() {
   let sectionRef = [useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -39,13 +39,6 @@ export default function Section3() {
     let number = (4 + state.phoneSection + incre) % 4;
     sectionRef[number]?.current?.click();
   }
-
-  setTimeout(() => {
-    setPhoneSectionByButton(1);
-    setTimeout(() => {
-      setPhoneSectionByButton(1);
-    }, 3000);
-  }, 3000);
 
   return (
     <div className={styles.section} id="section3">

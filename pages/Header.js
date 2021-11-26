@@ -75,7 +75,9 @@ export default function Header() {
 
   return (
     <div className={styles.header}>
-      {state.menuActive ? <div className={styles.blocking}></div> : null}
+      {state.menuActive ? (
+        <div className={styles.blocking} onClick={toggleMenuActive}></div>
+      ) : null}
       <div className={styles.content}>
         <div className={styles.logo} onClick={() => moveToSection(1)}>
           <img
@@ -139,55 +141,6 @@ export default function Header() {
             <div className={styles.btnText}>문의하기</div>
           </div>
         </div>
-        {/* {state.menuActive ? (
-          <div className={classNames(styles.menuGroup, styles.active)}>
-            <div
-              className={styles.menu}
-              onClick={() =>
-                (location.href =
-                  "https://homangu.notion.site/moyo-0f854cb2e63d42e8b31c147bd9c2db2a")
-              }
-            >
-              회사소개
-            </div>
-            <div className={styles.menu} onClick={() => moveToSection(3)}>
-              모임 서비스
-            </div>
-            <div className={styles.menu} onClick={() => moveToSection(5)}>
-              공간 서비스
-            </div>
-            <div
-              className={styles.menuBtn}
-              onClick={() => (location.href = "https://pf.kakao.com/_xhquRK")}
-            >
-              <div className={styles.btnText}>문의하기</div>
-            </div>
-          </div>
-        ) : (
-          <div className={classNames(styles.menuGroup, styles.deactive)}>
-            <div
-              className={styles.menu}
-              onClick={() =>
-                (location.href =
-                  "https://homangu.notion.site/moyo-0f854cb2e63d42e8b31c147bd9c2db2a")
-              }
-            >
-              회사소개
-            </div>
-            <div className={styles.menu} onClick={() => moveToSection(3)}>
-              모임 서비스
-            </div>
-            <div className={styles.menu} onClick={() => moveToSection(5)}>
-              공간 서비스
-            </div>
-            <div
-              className={styles.menuBtn}
-              onClick={() => (location.href = "https://pf.kakao.com/_xhquRK")}
-            >
-              <div className={styles.btnText}>문의하기</div>
-            </div>
-          </div>
-        )} */}
         <div className={styles.menuToggle} onClick={toggleMenuActive}>
           <MenuController
             direction={state.menuActive ? 1 : -1}
