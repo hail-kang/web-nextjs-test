@@ -45,6 +45,16 @@ export default function Header() {
     setState({
       menuActive: state.menuActive ^ true,
     });
+
+    setTimeout(() => {
+      let menu = document.querySelector(
+        `.${styles.menuGroup}.${styles.deactive}`
+      );
+      if (menu != null) {
+        menu.classList.remove(styles.deactive);
+        menu.classList.add(styles.none);
+      }
+    }, 500);
   }
 
   function moveToSection(number) {
@@ -90,7 +100,10 @@ export default function Header() {
           )}
         >
           <div
-            className={styles.menu}
+            className={classNames(
+              styles.menu,
+              state.menuActive ? styles.active : styles.deactive
+            )}
             onClick={() =>
               (location.href =
                 "https://homangu.notion.site/moyo-0f854cb2e63d42e8b31c147bd9c2db2a")
@@ -98,14 +111,29 @@ export default function Header() {
           >
             회사소개
           </div>
-          <div className={styles.menu} onClick={() => moveToSection(3)}>
+          <div
+            className={classNames(
+              styles.menu,
+              state.menuActive ? styles.active : styles.deactive
+            )}
+            onClick={() => moveToSection(3)}
+          >
             모임 서비스
           </div>
-          <div className={styles.menu} onClick={() => moveToSection(5)}>
+          <div
+            className={classNames(
+              styles.menu,
+              state.menuActive ? styles.active : styles.deactive
+            )}
+            onClick={() => moveToSection(5)}
+          >
             공간 서비스
           </div>
           <div
-            className={styles.menuBtn}
+            className={classNames(
+              styles.menuBtn,
+              state.menuActive ? styles.active : styles.deactive
+            )}
             onClick={() => (location.href = "https://pf.kakao.com/_xhquRK")}
           >
             <div className={styles.btnText}>문의하기</div>

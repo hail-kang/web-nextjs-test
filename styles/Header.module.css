@@ -169,15 +169,33 @@
     display: none;
   }
 
-  .menu {
-    margin-top: 16px;
-    margin-bottom: 16px;
+  .menu.deactive {
+    visibility: hidden;
   }
 
-  .menuBtn {
+  .menuBtn.deactive {
+    visibility: hidden;
+  }
+
+  .menu.active {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+  }
+
+  .menuBtn.active {
+    display: flex;
     width: 90%;
     flex: 0 0 48px;
     margin-top: 8px;
+
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
   }
 
   .blocking {
@@ -191,27 +209,49 @@
     z-index: 777;
   }
 
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
   @keyframes slidein {
     from {
-      margin-top: -100px;
+      height: 0px;
       opacity: 0.5;
     }
 
     to {
-      margin-top: 0px;
+      height: 194px;
       opacity: 1;
     }
   }
 
   @keyframes slideout {
     from {
-      margin-top: 0px;
+      height: 194px;
       opacity: 1;
     }
 
     to {
-      margin-top: -100px;
-      opacity: 0;
+      height: 0px;
+      opacity: 0.5;
     }
   }
 }
