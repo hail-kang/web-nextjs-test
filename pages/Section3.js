@@ -63,7 +63,7 @@ export default function Section3() {
     setTimeout(() => {
       animationReplay.style = "display:block";
       marginObject.style = "margin-top:0px";
-    }, 1);
+    }, 100);
   }
 
   function setPhoneSectionByButton(incre) {
