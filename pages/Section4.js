@@ -1,6 +1,38 @@
 import styles from "../styles/Section4.module.css";
 import classNames from "classnames";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+
+import Lottie from "react-lottie";
+import * as motion1 from "./data/motion1.json";
+import * as motion2 from "./data/motion2.json";
+import * as motion3 from "./data/motion3.json";
+
+class MotionController extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: this.props.animationData,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
+
+    return (
+      <div>
+        <Lottie
+          options={defaultOptions}
+          height={this.props.height}
+          width={this.props.width}
+        />
+      </div>
+    );
+  }
+}
 
 export default function Section4() {
   let [state, setState] = useState({
@@ -67,19 +99,6 @@ export default function Section4() {
       });
     }
     setState({ page: number });
-
-    // let scrollPosition = box.scrollLeft;
-    // let centerPosition = scrollPosition + boxSize / 2;
-
-    // let number = parseInt(centerPosition / unitSize);d
-
-    // if (number >= 1 && number <= 3) {
-    //   box.scroll({
-    //     left: parseInt(number * unitSize - (boxSize - unitSize) / 2),
-    //     behavior: "smooth",
-    //   });
-    // }
-    // setState({ page: number });
   }
 
   function stepNextPage() {
@@ -115,7 +134,12 @@ export default function Section4() {
           <div className={styles.component2__item}></div>
 
           <div className={styles.component2__item}>
-            <div className={styles.component2__item__icon1}></div>
+            {/* <div className={styles.component2__item__icon1}></div> */}
+            <MotionController
+              height={200}
+              width={200}
+              animationData={motion1}
+            />
             <div className={styles.component2__item__text}>
               <p>모임 테마에 딱 맞는</p>
               <p>공간을 찾고 싶어</p>

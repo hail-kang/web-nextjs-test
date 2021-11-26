@@ -182,6 +182,11 @@
   display: none;
 }
 
+.flex {
+  display: flex;
+  flex: 0 0 461px;
+}
+
 @keyframes slidein {
   from {
     margin-left: 50px;
@@ -229,6 +234,10 @@
     display: flex;
     justify-content: center;
     flex: 0 0 495px;
+  }
+
+  .flex {
+    flex: 0 0 0px;
   }
 
   @keyframes slidein {

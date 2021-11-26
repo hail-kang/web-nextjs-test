@@ -11,28 +11,7 @@ export default function Section3() {
     "밸런스 테스트",
     "소셜 프로그램",
   ];
-  let phoneSectionLabel1 = [
-    `<p>여행지에서</p>
-    <p>어떤 모임이 열릴까?</p>`,
-    `<p>누가</p>
-    <p>모임에 올까?</p>`,
-    `<p>나랑</p>
-    <p>맞는 사람들일까?</p>`,
-    `<p>클래스랑</p>
-    <p>뭐가 달라?</P>`,
-  ];
-  let phoneSectionLabel2 = [
-    `<p>필터에 가고 싶은 여행지, 관심사를 입력하면</p>
-    <p>나에게 딱 맞는 프로그램을 찾을 수 있어요</p>`,
-    `<p>모임을 신청하면 함께 신청한 여행자가</p>
-    <p>어떤 사람인지 확인할 수 있어요</p>`,
-    `<p>모임, 여행 밸런스테스트를 통해</p>
-    <p>함께 참여하는 사람이 나와 잘 맞는지</P>
-    <p>바로 확인해볼 수 있어요!</P>`,
-    `<p>모여 앱에서 진행되는 모든 프로그램에는</p>
-    <p>여행자끼리 소통할 수 있는</P>
-    <p>소셜 프로그램이 준비되어 있어요!</P>`,
-  ];
+
   let [state, setState] = useState({
     phoneSection: 0,
   });
@@ -53,9 +32,6 @@ export default function Section3() {
       behavior: "smooth",
     });
 
-    // let animationReplay = document.getElementsByClassName(
-    //   styles.component2__1
-    // )[0];
     setState({ phoneSection: number });
   }
 
@@ -104,26 +80,10 @@ export default function Section3() {
         </div>
 
         <div className={styles.component2}>
-          {/* <div className={styles.component2__1}>
-            <div className={styles.component2__1__label1}>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: phoneSectionLabel1[state.phoneSection],
-                }}
-              ></div>
-            </div>
-            <div className={styles.component2__1__label2}>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: phoneSectionLabel2[state.phoneSection],
-                }}
-              ></div>
-            </div>
-          </div> */}
           {(() => {
             if (state.phoneSection == 0) {
               return (
-                <div>
+                <div className={styles.flex}>
                   <div className={classNames(styles.component2__1)}>
                     <div className={styles.component2__1__label1}>
                       <p>여행지에서</p>
@@ -176,7 +136,7 @@ export default function Section3() {
               );
             } else if (state.phoneSection == 1) {
               return (
-                <div>
+                <div className={styles.flex}>
                   <div
                     className={classNames(styles.component2__1, styles.none)}
                   >
@@ -229,7 +189,7 @@ export default function Section3() {
               );
             } else if (state.phoneSection == 2) {
               return (
-                <div>
+                <div className={styles.flex}>
                   <div
                     className={classNames(styles.component2__1, styles.none)}
                   >
@@ -282,7 +242,7 @@ export default function Section3() {
               );
             } else if (state.phoneSection == 3) {
               return (
-                <div>
+                <div className={styles.flex}>
                   <div
                     className={classNames(styles.component2__1, styles.none)}
                   >

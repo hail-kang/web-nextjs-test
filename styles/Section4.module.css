@@ -127,6 +127,7 @@
     justify-content: start;
     /* overflow-x: auto; */
     overflow: hidden;
+    /* scroll-snap-type: x mandatory; */
   }
 
   .component2__item {
