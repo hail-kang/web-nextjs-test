@@ -118,7 +118,7 @@ export default function Section4() {
   }
 
   return (
-    <div className={styles.section}>
+    <div className={styles.section} id="section4">
       <div className={styles.content}>
         <div className={styles.component1}>
           <p>모일 수 있는 공간은</p>

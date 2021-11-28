@@ -11,21 +11,27 @@ export default function Section6() {
         </div>
         <div className={styles.component2}>
           <div className={styles.component2__1}>
-            <a href="https://www.instagram.com/_daily_moyo_/">
+            <a href="https://www.instagram.com/_daily_moyo_/" target="_blank">
               <div className={styles.component2__item1}></div>
             </a>
-            <a href="https://blog.naver.com/moyoapp">
+            <a href="https://blog.naver.com/moyoapp" target="_blank">
               <div className={styles.component2__item2}></div>
             </a>
-            <a href="https://www.youtube.com/watch?v=2HGyMUPQ9Pg">
+            <a
+              href="https://www.youtube.com/watch?v=2HGyMUPQ9Pg"
+              target="_blank"
+            >
               <div className={styles.component2__item3}></div>
             </a>
           </div>
           <div className={styles.component2__2}>
-            <a href="https://brunch.co.kr/@4261e7f2e761402">
+            <a href="https://brunch.co.kr/@4261e7f2e761402" target="_blank">
               <div className={styles.component2__item4}></div>
             </a>
-            <a href="https://homangu.notion.site/moyo-0f854cb2e63d42e8b31c147bd9c2db2a">
+            <a
+              href="https://homangu.notion.site/moyo-0f854cb2e63d42e8b31c147bd9c2db2a"
+              target="_blank"
+            >
               <div className={styles.component2__item5}></div>
             </a>
           </div>

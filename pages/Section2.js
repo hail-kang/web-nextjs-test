@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 export default function Section2() {
   return (
-    <div className={styles.section}>
+    <div className={styles.section} id="section2">
       <div className={styles.content}>
         <div className={styles.component1}></div>
         <div className={styles.component2}>

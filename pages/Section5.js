@@ -83,7 +83,7 @@ export default function Section5() {
           {(() => {
             if (state.phoneSection == 0) {
               return (
-                <div>
+                <div className={styles.flex}>
                   <div className={classNames(styles.component2__1)}>
                     <div className={styles.component2__1__label1}>
                       <p>모임 테마별로</p>
@@ -137,7 +137,7 @@ export default function Section5() {
               );
             } else if (state.phoneSection == 1) {
               return (
-                <div>
+                <div className={styles.flex}>
                   <div
                     className={classNames(styles.component2__1, styles.none)}
                   >
@@ -191,7 +191,7 @@ export default function Section5() {
               );
             } else if (state.phoneSection == 2) {
               return (
-                <div>
+                <div className={styles.flex}>
                   <div
                     className={classNames(styles.component2__1, styles.none)}
                   >
@@ -245,7 +245,7 @@ export default function Section5() {
               );
             } else if (state.phoneSection == 3) {
               return (
-                <div>
+                <div className={styles.flex}>
                   <div
                     className={classNames(styles.component2__1, styles.none)}
                   >

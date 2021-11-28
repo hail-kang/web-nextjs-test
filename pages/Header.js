@@ -107,8 +107,9 @@ export default function Header() {
               state.menuActive ? styles.active : styles.deactive
             )}
             onClick={() =>
-              (location.href =
-                "https://homangu.notion.site/moyo-0f854cb2e63d42e8b31c147bd9c2db2a")
+              window.open(
+                "https://homangu.notion.site/moyo-0f854cb2e63d42e8b31c147bd9c2db2a"
+              )
             }
           >
             회사소개
@@ -118,7 +119,7 @@ export default function Header() {
               styles.menu,
               state.menuActive ? styles.active : styles.deactive
             )}
-            onClick={() => moveToSection(3)}
+            onClick={() => moveToSection(2)}
           >
             모임 서비스
           </div>
@@ -127,7 +128,7 @@ export default function Header() {
               styles.menu,
               state.menuActive ? styles.active : styles.deactive
             )}
-            onClick={() => moveToSection(5)}
+            onClick={() => moveToSection(4)}
           >
             공간 서비스
           </div>
@@ -136,7 +137,7 @@ export default function Header() {
               styles.menuBtn,
               state.menuActive ? styles.active : styles.deactive
             )}
-            onClick={() => (location.href = "https://pf.kakao.com/_xhquRK")}
+            onClick={() => window.open("https://pf.kakao.com/_xhquRK")}
           >
             <div className={styles.btnText}>문의하기</div>
           </div>

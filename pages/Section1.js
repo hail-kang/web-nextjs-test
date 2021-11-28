@@ -27,7 +27,10 @@ export default function Section1() {
           </div>
 
           <div className={styles.component1__btnGroup}>
-            <a href="https://play.google.com/store/apps/details?id=com.moyo">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.moyo"
+              target="_blank"
+            >
               <div className={styles.component1__marketBtn}>
                 <div className={styles.component1__marketBtn__googleIcon}></div>
                 <div className={styles.component1__marketBtn__text}>
@@ -35,7 +38,10 @@ export default function Section1() {
                 </div>
               </div>
             </a>
-            <a href="https://apps.apple.com/kr/app/%EB%AA%A8%EC%97%AC/id1531678550">
+            <a
+              href="https://apps.apple.com/kr/app/%EB%AA%A8%EC%97%AC/id1531678550"
+              target="_blank"
+            >
               <div className={styles.component1__marketBtn}>
                 <div className={styles.component1__marketBtn__appleIcon}></div>
                 <div className={styles.component1__marketBtn__text}>
