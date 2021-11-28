@@ -18,11 +18,16 @@ export default function Section6() {
             >
               <div className={styles.component2__item1}></div>
             </a>
-            <a href="https://blog.naver.com/moyoapp" target="_blank">
+            <a
+              href="https://blog.naver.com/moyoapp"
+              target="_blank"
+              rel="noreferrer"
+            >
               <div className={styles.component2__item2}></div>
             </a>
             <a
               href="https://www.youtube.com/watch?v=2HGyMUPQ9Pg"
+              rel="noreferrer"
               target="_blank"
             >
               <div className={styles.component2__item3}></div>
