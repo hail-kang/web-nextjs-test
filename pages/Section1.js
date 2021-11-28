@@ -30,6 +30,7 @@ export default function Section1() {
             <a
               href="https://play.google.com/store/apps/details?id=com.moyo"
               target="_blank"
+              rel="noreferrer"
             >
               <div className={styles.component1__marketBtn}>
                 <div className={styles.component1__marketBtn__googleIcon}></div>
@@ -41,6 +42,7 @@ export default function Section1() {
             <a
               href="https://apps.apple.com/kr/app/%EB%AA%A8%EC%97%AC/id1531678550"
               target="_blank"
+              rel="noreferrer"
             >
               <div className={styles.component1__marketBtn}>
                 <div className={styles.component1__marketBtn__appleIcon}></div>
